@@ -1,15 +1,15 @@
-function App() {
-  const now = new Date();
-  const a = 10;
-  const b = 20;
-  console.log(now, a + b);
+import Hello from "./components/Hello";
 
+function App() {
+  const name = 'Peter'
+  const age = 10;
   return (
     <div>
-      <p>Hello world, it is {now.toString()}</p>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
+      <div>
+        <h1>Greetings</h1>
+        <Hello name="Maya" age={26 + 10} />
+        <Hello name={name} age={age} />
+      </div>
     </div>
   );
 }

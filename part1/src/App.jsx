@@ -1,15 +1,19 @@
-import Hello from "./components/Hello";
+import Footer from './components/Footer';
+import Hello from './components/Hello';
 
 function App() {
-  const name = 'Peter'
-  const age = 10;
+  const friends = [
+    { name: 'John', age: 25 },
+    { name: 'Maya', age: 10 },
+  ];
   return (
     <div>
-      <div>
-        <h1>Greetings</h1>
-        <Hello name="Maya" age={26 + 10} />
-        <Hello name={name} age={age} />
-      </div>
+      <p>
+        {friends[0].name} {friends[0].age}
+      </p>
+      <p>
+        {friends[1].name} {friends[1].age}
+      </p>
     </div>
   );
 }
